@@ -55,7 +55,7 @@ export default class CoursesList extends Component{
         return (
             <div>
                 <p>Courses List Component!</p>
-                <h3>Logged Exercises</h3>
+                <h3>Courses List</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>

@@ -2,7 +2,7 @@ const router = require('express').Router();
 let Student = require('../models/student.model');
 const bcrypt = require('bcrypt');
 
-router.route('/').get((req, res) => {
+router.route('/studentsList').get((req, res) => {
     Student.find()
         .then(students => res.json(students))
         .catch(err => res.status(400).json('Error: ' + err));
