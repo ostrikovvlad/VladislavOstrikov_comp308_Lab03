@@ -6,13 +6,11 @@ const CourseSchema = new Schema( {
         type: String, 
         min: 6,
         max: 8,
-        required: true,
-        unique: true
+        required: true
     },
     courseName: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     section: {
         type: String,
