@@ -8,6 +8,7 @@ import CoursesList from "./components/courses-list.component";
 import EditCourse from "./components/edit-courses.component";
 import CreateCourse from "./components/create-course.component";
 import RegisterStudent from "./components/registration.component";
+import Login from "./components/login.component"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
     <Route path="/edit/:id" component = {EditCourse} />
     <Route path="/create" component = {CreateCourse} />
     <Route path="/registration" component = {RegisterStudent} />
+    <Route path="/login" component = {Login} />
     </div>
     </Router>
   );

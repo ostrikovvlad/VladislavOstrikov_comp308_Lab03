@@ -121,7 +121,7 @@ export default class RegisterStudent extends Component{
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group"> 
 
-                <div>
+                <div className="form-group">
                 <label>Student Number: </label>
                 <input type="number"
                     required
@@ -131,7 +131,7 @@ export default class RegisterStudent extends Component{
                 />
                 </div>
 
-                <div>
+                <div className="form-group">
                 <label>Password: </label>
                 <input type="password"
                     required
@@ -142,7 +142,7 @@ export default class RegisterStudent extends Component{
                 />
                 </div>
 
-                <div>
+                <div className="form-group">
                 <label>Email: </label>
                 <input type="email"
                     required
@@ -153,7 +153,7 @@ export default class RegisterStudent extends Component{
                 />
                 </div>
 
-                <div>
+                <div className="form-group">
                 <label>First Name: </label>
                 <input type="text"
                     required
@@ -163,7 +163,7 @@ export default class RegisterStudent extends Component{
                 />
                 </div>
 
-                <div>
+                <div className="form-group">
                 <label>Last Name: </label>
                 <input type="text"
                     required
@@ -173,7 +173,7 @@ export default class RegisterStudent extends Component{
                 />
                 </div>
 
-                <div>
+                <div className="form-group">
                 <label>Address: </label>
                 <input type="text"
                     required
@@ -183,7 +183,7 @@ export default class RegisterStudent extends Component{
                 />
                 </div>
 
-                <div>
+                <div className="form-group">
                 <label>City: </label>
                 <input type="text"
                     required
@@ -193,7 +193,7 @@ export default class RegisterStudent extends Component{
                 /> 
                 </div>     
 
-                <div>
+                <div className="form-group">
                 <label>Phone Number: </label>
                 <input type="tel"
                     className="form-control"
@@ -202,7 +202,7 @@ export default class RegisterStudent extends Component{
                 />
                 </div>
                 
-                <div>
+                <div className="form-group">
                 <label>Program: </label>
                 <input type="text"
                     required
