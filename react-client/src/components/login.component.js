@@ -35,10 +35,11 @@ export default class Login extends Component{
 
         console.log(student);
 
-        //axios.post('http://localhost:5000/students/add', student)
-        //    .then(res => console.log(res.data));
-        //
-            window.location = '/';
+        axios
+            .get("http://localhost:5000/login", { withCredentials: true })
+            .then(console.log)
+            .catch(console.error);
+        window.location = '/';
     }
 
     render(){

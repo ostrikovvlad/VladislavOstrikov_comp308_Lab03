@@ -1,13 +1,13 @@
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
-//const User = require('../app/models/user.server.model');
-const User = require('mongoose').model('User');
+const Student = require('../models/student.model');
+//const Student = require('mongoose').model('Student');
 
 module.exports = function(passport) {
     passport.use(
         new LocalStrategy({studentNumberField : 'studentNumber'},(studentNumber,password,done)=> {
                 //match user
-                User.findOne({studentNumber : studentNumber})
+                Student.findOne({studentNumber : studentNumber})
                 .then((user)=>{
                  if(!user) {
                      return done(null,false,{message : 'that studentNumber is not registered'});
@@ -33,7 +33,7 @@ module.exports = function(passport) {
       });
       
       passport.deserializeUser(function(id, done) {
-        User.findById(id, function(err, user) {
+        Student.findById(id, function(err, user) {
           done(err, user);
         });
       }); 
