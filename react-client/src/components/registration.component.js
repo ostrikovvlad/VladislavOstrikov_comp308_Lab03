@@ -6,7 +6,15 @@ export default class RegisterStudent extends Component{
     constructor(props) {
         super(props);
 
+        this.onChangeStudentNumber = this.onChangeStudentNumber.bind(this);
+        this.onChangePassword = this.onChangePassword.bind(this);
+        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangeFirstName = this.onChangeFirstName.bind(this);
+        this.onChangeLastName = this.onChangeLastName.bind(this);
+        this.onChangeAddress = this.onChangeAddress.bind(this);
+        this.onChangeCity = this.onChangeCity.bind(this);
         this.onChangePhoneNumber = this.onChangePhoneNumber.bind(this);
+        this.onChangeProgram = this.onChangeProgram.bind(this);
 
         this.state = {
             studentNumber: 0,
