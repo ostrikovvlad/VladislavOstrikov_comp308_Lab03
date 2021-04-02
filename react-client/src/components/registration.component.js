@@ -112,6 +112,7 @@ export default class RegisterStudent extends Component{
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group"> 
 
+                <div>
                 <label>Student Number: </label>
                 <input type="number"
                     required
@@ -121,7 +122,9 @@ export default class RegisterStudent extends Component{
                     value = {this.state.studentNumber}
                     onChange = {this.onChangeStudentNumber}
                 />
+                </div>
 
+                <div>
                 <label>Password: </label>
                 <input type="password"
                     required
@@ -130,7 +133,9 @@ export default class RegisterStudent extends Component{
                     value = {this.state.password}
                     onChange = {this.onChangePassword}
                 />
+                </div>
 
+                <div>
                 <label>Email: </label>
                 <input type="email"
                     required
@@ -139,7 +144,9 @@ export default class RegisterStudent extends Component{
                     value = {this.state.email}
                     onChange = {this.onChangeEmail}
                 />
+                </div>
 
+                <div>
                 <label>First Name: </label>
                 <input type="text"
                     required
@@ -147,7 +154,9 @@ export default class RegisterStudent extends Component{
                     value = {this.state.firstName}
                     onChange = {this.onChangeFirstName}
                 />
+                </div>
 
+                <div>
                 <label>Last Name: </label>
                 <input type="text"
                     required
@@ -155,7 +164,9 @@ export default class RegisterStudent extends Component{
                     value = {this.state.lastName}
                     onChange = {this.onChangeLastName}
                 />
+                </div>
 
+                <div>
                 <label>Address: </label>
                 <input type="text"
                     required
@@ -163,15 +174,19 @@ export default class RegisterStudent extends Component{
                     value = {this.state.address}
                     onChange = {this.onChangeAddress}
                 />
+                </div>
 
+                <div>
                 <label>City: </label>
                 <input type="text"
                     required
                     className = "form-control"
                     value = {this.state.city}
                     onChange = {this.onChangeCity}
-                />      
+                /> 
+                </div>     
 
+                <div>
                 <label>Phone Number: </label>
                 <input type="tel"
                     className="form-control"
@@ -179,7 +194,9 @@ export default class RegisterStudent extends Component{
                     value = {this.state.phoneNumber}
                     onChange = {this.onChangePhoneNumber}
                 />
+                </div>
                 
+                <div>
                 <label>Program: </label>
                 <input type="text"
                     required
@@ -187,6 +204,7 @@ export default class RegisterStudent extends Component{
                     value = {this.state.program}
                     onChange = {this.onChangeProgram}
                 />
+                </div>
                 </div>
 
                 <div className="form-group">

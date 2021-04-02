@@ -7,7 +7,7 @@ export default class CoursesList extends Component{
         super(props);
 
         this.state = {
-            courses = []
+            courses: []
         }
     }
 
