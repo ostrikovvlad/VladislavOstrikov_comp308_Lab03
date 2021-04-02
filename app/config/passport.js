@@ -5,12 +5,12 @@ const User = require('mongoose').model('User');
 
 module.exports = function(passport) {
     passport.use(
-        new LocalStrategy({usernameField : 'email'},(email,password,done)=> {
+        new LocalStrategy({studentNumberField : 'studentNumber'},(studentNumber,password,done)=> {
                 //match user
-                User.findOne({email : email})
+                User.findOne({studentNumber : studentNumber})
                 .then((user)=>{
                  if(!user) {
-                     return done(null,false,{message : 'that email is not registered'});
+                     return done(null,false,{message : 'that studentNumber is not registered'});
                  }
 
                  //match pass
