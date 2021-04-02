@@ -21,6 +21,48 @@ export default class RegisterStudent extends Component{
         }
     }
 
+    onChangeStudentNumber(e){
+        this.setState({
+            studentNumber: e.target.value
+        });
+    }
+
+    onChangeEmail(e){
+        this.setState({
+            email: e.target.value
+        });
+    }
+
+    onChangeFirstName(e){
+        this.setState({
+            firstName: e.target.value
+        });
+    }
+
+    onChangeLastName(e){
+        this.setState({
+            lastName: e.target.value
+        });
+    }
+
+    onChangeAddress(e){
+        this.setState({
+            address: e.target.value
+        });
+    }
+
+    onChangeCity(e){
+        this.setState({
+            city: e.target.value
+        });
+    }
+
+    onChangeProgram(e){
+        this.setState({
+            program: e.target.value
+        });
+    }
+
     onChangePhoneNumber(e) {
         let num = e.target.value.replace(/\D/g, '');
         e.target.value = '(' + num.substring(0, 3) + ')' + ' ' + 

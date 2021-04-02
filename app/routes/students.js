@@ -21,10 +21,17 @@ router.route('/add').post((req, res) => {
     const newStudent = new Student
         ({studentNumber, password, email, firstName, lastName, address, city, phoneNumber, program});
 
+        bcrypt.genSalt(10,(err,salt)=> 
+        bcrypt.hash(newStudent.password,salt,
+            (err,hash)=> {
+                if(err) throw err;
+                    //save pass to hash
+                    newStudent.password = hash;
+
     newStudent.save()
         .then(() => res.json('Student added!'))
         .catch(err => res.status(400).json('Error: ' + err));
-
+            }))
 });
 
 module.exports = router;
