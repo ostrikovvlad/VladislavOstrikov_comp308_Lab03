@@ -15,6 +15,7 @@ export default class RegisterStudent extends Component{
         this.onChangeCity = this.onChangeCity.bind(this);
         this.onChangePhoneNumber = this.onChangePhoneNumber.bind(this);
         this.onChangeProgram = this.onChangeProgram.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             studentNumber: 0,
@@ -125,8 +126,6 @@ export default class RegisterStudent extends Component{
                 <input type="number"
                     required
                     className = "form-control"
-                    min = "9"
-                    max = "9"
                     value = {this.state.studentNumber}
                     onChange = {this.onChangeStudentNumber}
                 />
@@ -198,7 +197,6 @@ export default class RegisterStudent extends Component{
                 <label>Phone Number: </label>
                 <input type="tel"
                     className="form-control"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     value = {this.state.phoneNumber}
                     onChange = {this.onChangePhoneNumber}
                 />
