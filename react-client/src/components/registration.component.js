@@ -106,7 +106,7 @@ export default class RegisterStudent extends Component{
 
         console.log(student);
 
-        axios.prototype('http://localhost:500/students/add', student)
+        axios.post('http://localhost:5000/students/add', student)
             .then(res => console.log(res.data));
 
             window.location = '/';
@@ -214,7 +214,7 @@ export default class RegisterStudent extends Component{
                 </div>
 
                 <div className="form-group">
-                <input type="submit" value="Create Course" className="btn btn-primary" />
+                <input type="submit" value="Sign Up" className="btn btn-primary" />
                 </div>
 
                 </form>

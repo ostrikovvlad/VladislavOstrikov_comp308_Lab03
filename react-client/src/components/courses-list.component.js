@@ -5,7 +5,7 @@ import axios from 'axios';
 const Courses = props => (
     <tr>
       <td>{props.course.courseCode}</td>
-      <td>{props.course.courseCode}</td>
+      <td>{props.course.courseName}</td>
       <td>{props.course.section}</td>
       <td>{props.course.semester}</td>
       <td>

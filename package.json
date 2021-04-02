@@ -4,6 +4,7 @@
   "description": "Lab 03 for COMP 308 - W2021. This project is an example of designing and implementing a complete web app using MEAN stack",
   "main": "index.js",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",

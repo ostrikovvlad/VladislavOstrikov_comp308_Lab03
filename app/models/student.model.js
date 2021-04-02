@@ -6,28 +6,20 @@ const StudentSchema = new Schema( {
         type: Number,
         required: true,
         unique: true,
-        trim: true,
-        min: 9,
-        max: 9
+        trim: true
     }, 
     password: {
         type: String, 
         required: true,
         min: 6,
-        trim: true,
-        validate: [
-            (password) => password.length >= 6,
-            'Password Should be Longer'
-        ]
+        trim: true
     },
     email: {
 		type: String,
 		// Set an email index
 		index: true,
         unique: true,
-        trim: true,
-		// Validate the email format
-		match: /.+\@.+\..+/
+        trim: true
 	},
     firstName: {
         type: String,
@@ -46,7 +38,7 @@ const StudentSchema = new Schema( {
         required: true
     },
     phoneNumber: {
-        type: Number,
+        type: String,
         required: true,
         min: 10
     },
