@@ -30,13 +30,29 @@ export default class RegisterStudent extends Component{
         });
     }
 
+    onChangePassword(e){
+        this.setState({
+            password: e.target.value
+        });
+    }
+
     render() {
         return (
             <div>
-                <p>Registration Component!</p>
+                <h3>Sign Up!</h3>
 
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group"> 
+
+                <label>Password: </label>
+                <input type="password"
+                    required
+                    className="form-control"
+                    min = "6"
+                    value = {this.state.password}
+                    onChange = {this.onChangePassword}
+                />
+
                 <label>Phone Number: </label>
                 <input type="tel"
                     className="form-control"
@@ -44,6 +60,8 @@ export default class RegisterStudent extends Component{
                     value = {this.state.phoneNumber}
                     onChange = {this.onChangePhoneNumber}
                 />
+
+                
                 </div>
                 </form>
             </div>
