@@ -27,6 +27,8 @@ export default class RegisterStudent extends Component{
         });
     }
 
+    
+
     onChangeEmail(e){
         this.setState({
             email: e.target.value
@@ -78,6 +80,30 @@ export default class RegisterStudent extends Component{
         });
     }
 
+    onSubmit(e) {
+        e.preventDefault();
+
+        const student = {
+            studentNumber: this.state.studentNumber,
+            password: this.state.password,
+            email: this.state.email,
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            address: this.state.address,
+            city: this.state.city,
+            phoneNumber: this.state.phoneNumber,
+            program: this.state.program
+        }
+
+        console.log(student);
+
+        axios.prototype('http://localhost:500/students/add', student)
+            .then(res => console.log(res.data));
+
+            window.location = '/';
+
+    }
+
     render() {
         return (
             <div>
@@ -85,6 +111,16 @@ export default class RegisterStudent extends Component{
 
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group"> 
+
+                <label>Student Number: </label>
+                <input type="number"
+                    required
+                    className = "form-control"
+                    min = "9"
+                    max = "9"
+                    value = {this.state.studentNumber}
+                    onChange = {this.onChangeStudentNumber}
+                />
 
                 <label>Password: </label>
                 <input type="password"
@@ -95,6 +131,47 @@ export default class RegisterStudent extends Component{
                     onChange = {this.onChangePassword}
                 />
 
+                <label>Email: </label>
+                <input type="email"
+                    required
+                    pattern = "/.+\@.+\..+/"
+                    className = "form-control"
+                    value = {this.state.email}
+                    onChange = {this.onChangeEmail}
+                />
+
+                <label>First Name: </label>
+                <input type="text"
+                    required
+                    className = "form-control"
+                    value = {this.state.firstName}
+                    onChange = {this.onChangeFirstName}
+                />
+
+                <label>Last Name: </label>
+                <input type="text"
+                    required
+                    className = "form-control"
+                    value = {this.state.lastName}
+                    onChange = {this.onChangeLastName}
+                />
+
+                <label>Address: </label>
+                <input type="text"
+                    required
+                    className = "form-control"
+                    value = {this.state.address}
+                    onChange = {this.onChangeAddress}
+                />
+
+                <label>City: </label>
+                <input type="text"
+                    required
+                    className = "form-control"
+                    value = {this.state.city}
+                    onChange = {this.onChangeCity}
+                />      
+
                 <label>Phone Number: </label>
                 <input type="tel"
                     className="form-control"
@@ -102,9 +179,20 @@ export default class RegisterStudent extends Component{
                     value = {this.state.phoneNumber}
                     onChange = {this.onChangePhoneNumber}
                 />
-
                 
+                <label>Program: </label>
+                <input type="text"
+                    required
+                    className = "form-control"
+                    value = {this.state.program}
+                    onChange = {this.onChangeProgram}
+                />
                 </div>
+
+                <div className="form-group">
+                <input type="submit" value="Create Course" className="btn btn-primary" />
+                </div>
+
                 </form>
             </div>
 

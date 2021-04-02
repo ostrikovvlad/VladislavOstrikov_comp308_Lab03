@@ -68,8 +68,6 @@ export default class CreateCourse extends Component{
           .then(res => console.log(res.data));
 
         window.location = '/';
-
-        window.location = '/';
     }
 
     render() {
