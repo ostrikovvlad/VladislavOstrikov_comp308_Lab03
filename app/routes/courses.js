@@ -31,23 +31,25 @@ router.route('/:id').get((req, res) => {
       .catch(err => res.status(400).json('Error: ' + err));
   });
   
-  router.route('/:id').delete((req, res) => {
-    Course.findByIdAndDelete(req.params.id)
-      .then(() => res.json('Course deleted.'))
-      .catch(err => res.status(400).json('Error: ' + err));
-  });
+router.route('/:id').delete((req, res) => {
+  Course.findByIdAndDelete(req.params.id)
+    .then(() => res.json('Course deleted.'))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
   
-  router.route('/update/:id').post((req, res) => {
-    Course.findById(req.params.id)
-      .then(course => {
-        const courseCode = req.body.courseCode;
-        const courseName = req.body.courseName;
-        const section = req.body.section;
-        const semester = req.body.semester;
+router.route('/update/:id').post((req, res) => {
+  Course.findById(req.params.id)
+    .then(course => {
+      const courseCode = req.body.courseCode;
+      const courseName = req.body.courseName;
+      const section = req.body.section;
+      const semester = req.body.semester;
   
-        course.save()
-          .then(() => res.json('Course updated!'))
-          .catch(err => res.status(400).json('Error: ' + err));
-      })
-      .catch(err => res.status(400).json('Error: ' + err));
-  });
+      course.save()
+        .then(() => res.json('Course updated!'))
+        .catch(err => res.status(400).json('Error: ' + err));
+    })
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+module.exports = router;

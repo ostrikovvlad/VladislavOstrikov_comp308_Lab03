@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class CreateCourse extends Component{
 
@@ -62,6 +63,11 @@ export default class CreateCourse extends Component{
         }
 
         console.log(course);
+
+        axios.post('http://localhost:5000/courses/add', course)
+          .then(res => console.log(res.data));
+
+        window.location = '/';
 
         window.location = '/';
     }
